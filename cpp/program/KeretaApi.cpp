@@ -2,8 +2,8 @@
 #include <iostream>
 #include <vector>
 #include "Lokomotif.cpp"
+#include "Stasiun.cpp"
 #include "Gerbong.cpp"
-#include "StasiunPemberhentian.cpp"
 
 // Class KeretaApi
 class KeretaApi
@@ -14,7 +14,8 @@ private:
     string namaKeretaApi;
     vector<Lokomotif> daftarLokomotif;
     vector<Gerbong> daftarGerbong;
-    vector<StasiunPemberhentian> daftarStasiun;
+    Stasiun stasiunAsal;
+    Stasiun stasiunTujuan;
 
 public:
     // Default Constructor
@@ -23,16 +24,18 @@ public:
         namaKeretaApi = "";
         daftarLokomotif = vector<Lokomotif>();
         daftarGerbong = vector<Gerbong>();
-        daftarStasiun = vector<StasiunPemberhentian>();
+        stasiunAsal = Stasiun();
+        stasiunTujuan = Stasiun();
     }
 
     // Parameterized Constructor
-    KeretaApi(int kodeKeretaApi, string namaKeretaApi, vector<Lokomotif> daftarLokomotif, vector<Gerbong> daftarGerbong, vector<StasiunPemberhentian> daftarStasiun){
+    KeretaApi(int kodeKeretaApi, string namaKeretaApi, vector<Lokomotif> daftarLokomotif, vector<Gerbong> daftarGerbong, Stasiun stasiunAsal, Stasiun stasiunTujuan){
         this->kodeKeretaApi = kodeKeretaApi;
         this->namaKeretaApi = namaKeretaApi;
         this->daftarLokomotif = daftarLokomotif;
         this->daftarGerbong = daftarGerbong;
-        this->daftarStasiun = daftarStasiun;
+        this->stasiunAsal = stasiunAsal;
+        this->stasiunTujuan = stasiunTujuan;
     }
     // Method to print KeretaApi information
     void printInfo() {
@@ -46,10 +49,9 @@ public:
         for (const auto& gerbong : daftarGerbong) {
             cout << "  - " << gerbong.getNamaSarana() << " (" << gerbong.getKodeSarana() << ")" << endl;
         }
-        cout << "Daftar Stasiun Pemberhentian:" << endl;
-        for (const auto& stasiun : daftarStasiun) {
-            cout << "  - " << stasiun.getNamaStasiun() << " (" << stasiun.getKodeStasiun() << ")" << endl;
-        }
+        cout << "Stasiun Asal: " << stasiunAsal.getNamaStasiun() << " (" << stasiunAsal.getKodeStasiun() << ")" << endl;
+        cout << "Stasiun Tujuan: " << stasiunTujuan.getNamaStasiun() << " (" << stasiunTujuan.getKodeStasiun() << ")" << endl;
+
     }
 
     // Getter and Setter for kodeKeretaApi
@@ -63,7 +65,8 @@ public:
     // Getter for daftarLokomotif
     void addLokomotif(const Lokomotif& lokomotif) {daftarLokomotif.push_back(lokomotif);}
     void addGerbong(const Gerbong& gerbong) {daftarGerbong.push_back(gerbong);}
-    void addStasiun(const StasiunPemberhentian& stasiun) {daftarStasiun.push_back(stasiun);}
+    void addStasiunAsal(const Stasiun& stasiun) {stasiunAsal = stasiun;}
+    void addStasiunTujuan(const Stasiun& stasiun) {stasiunTujuan = stasiun;}
 
     // Destructor
     ~KeretaApi(){}

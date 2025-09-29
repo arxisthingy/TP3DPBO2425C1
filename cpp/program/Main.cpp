@@ -1,6 +1,7 @@
 #include "KeretaApi.cpp"
 #include "GerbongBarang.cpp"
 #include "GerbongPenumpang.cpp"
+#include "Stasiun.cpp"
 #include <iostream>
 #include <vector>
 
@@ -39,14 +40,24 @@ int main()
     // Gerbong Barang 2
     GerbongBarang GD01104("GD 0 11 04", "Gerbong Datar", 15000, "Bogie Barber S-2", trainmarkC, 57000, "Petikemas");
     GD01104.printInfo();
-    
-    // Stasiun Pemberhentian
-    StasiunPemberhentian BL("BL", "Blitar", "Kelas Besar Tipe A");
-    BL.printInfo();
+
+    // Stasiun
+    vector<Stasiun> daftarStasiun;
+    Stasiun BL("BL", "Blitar", "Kelas Besar Tipe A");
+    Stasiun PSE("PSE", "Pasar Senen", "Kelas Besar Tipe A");
+    daftarStasiun.push_back(BL);
+    daftarStasiun.push_back(PSE);
+
+    // Print Stasiun Info
+    cout << std::endl << "Daftar Stasiun:" << std::endl;
+    for (auto& stasiun : daftarStasiun) {
+        stasiun.printInfo();
+    }
 
     // Kereta Api
     vector<KeretaApi> daftarKeretaApi;
 
+    // Add Kereta Api
     kereta.setKodeKeretaApi(112);
     kereta.setNamaKeretaApi("Brantas");
     kereta.addLokomotif(lokomotif1);
@@ -61,31 +72,9 @@ int main()
     kereta.addGerbong(GerbongPenumpang("K3 0 14 34", "K3", 37000, "Bogie K5", trainmarkE, 72, "Ekonomi NG"));
     kereta.addGerbong(B00903);
 
-    kereta.addStasiun(StasiunPemberhentian("BL", "Blitar", "Kelas Besar Tipe A"));
-    kereta.addStasiun(StasiunPemberhentian("NT", "Ngunut", "Kelas II"));
-    kereta.addStasiun(StasiunPemberhentian("TA", "Tulungagung", "Kelas Besar Tipe C"));
-    kereta.addStasiun(StasiunPemberhentian("KD", "Kediri", "Kelas Besar Tipe C"));
-    kereta.addStasiun(StasiunPemberhentian("PPR", "Papar", "Kelas III"));
-    kereta.addStasiun(StasiunPemberhentian("KTS", "Kertosono", "Kelas Besar Tipe B"));
-    kereta.addStasiun(StasiunPemberhentian("NJ", "Nganjuk", "Kelas I"));
-    kereta.addStasiun(StasiunPemberhentian("CRB", "Caruban", "Kelas II"));
-    kereta.addStasiun(StasiunPemberhentian("MN", "Madiun", "Kelas Besar Tipe A"));
-    kereta.addStasiun(StasiunPemberhentian("MGT", "Magetan", "Kelas III"));
-    kereta.addStasiun(StasiunPemberhentian("NGW", "Ngawi", "Kelas II"));
-    kereta.addStasiun(StasiunPemberhentian("WK", "Walikukun", "Kelas II"));
-    kereta.addStasiun(StasiunPemberhentian("SR", "Sragen", "Kelas II"));
-    kereta.addStasiun(StasiunPemberhentian("SK", "Solojebres", "Kelas Besar Tipe C"));
-    kereta.addStasiun(StasiunPemberhentian("GD", "Gundih", "Kelas I"));
-    kereta.addStasiun(StasiunPemberhentian("SMT", "Semarang Tawang", "Kelas Besar Tipe A"));
-    kereta.addStasiun(StasiunPemberhentian("PK", "Pekalongan", "Kelas Besar Tipe C"));
-    kereta.addStasiun(StasiunPemberhentian("TG", "Tegal", "Kelas Besar Tipe A"));
-    kereta.addStasiun(StasiunPemberhentian("BB", "Brebes", "Kelas I"));
-    kereta.addStasiun(StasiunPemberhentian("CNP", "Cirebon Prujakan", "Kelas Besar Tipe A"));
-    kereta.addStasiun(StasiunPemberhentian("JTB", "Jatibarang", "Kelas Besar Tipe C"));
-    kereta.addStasiun(StasiunPemberhentian("PGB", "Pegadenbaru", "Kelas II"));
-    kereta.addStasiun(StasiunPemberhentian("BKS", "Bekasi", "Kelas Besar Tipe A"));
-    kereta.addStasiun(StasiunPemberhentian("JNG", "Jatinegara", "Kelas Besar Tipe A"));
-    kereta.addStasiun(StasiunPemberhentian("PSE", "Pasar Senen", "Kelas Besar Tipe A"));
+    // Add Stasiun Asal and Tujuan
+    kereta.addStasiunAsal(BL);
+    kereta.addStasiunTujuan(PSE);
 
     kereta.printInfo();
 }

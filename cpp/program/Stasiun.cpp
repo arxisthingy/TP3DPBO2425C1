@@ -26,7 +26,7 @@ public:
     }
 
     // Method to print Stasiun information
-    void printInfo() {
+    void printInfo() const {
         cout << "(" << kodeStasiun << ") " << namaStasiun << " - " << tipeStasiun << endl;
     }
 

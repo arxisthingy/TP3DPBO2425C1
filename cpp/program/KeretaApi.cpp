@@ -42,16 +42,42 @@ public:
         cout << endl;
         cout << "=== Info Kereta Api " << "(" << kodeKeretaApi << ") " << namaKeretaApi << " ===" << endl;
         cout << "Daftar Lokomotif:" << endl;
-        for (const auto& lokomotif : daftarLokomotif) {
-            cout << "  - " << lokomotif.getNamaSarana() << " (" << lokomotif.getKodeSarana() << ")" << endl;
-        }
-        cout << "Daftar Gerbong:" << endl;
-        for (const auto& gerbong : daftarGerbong) {
-            cout << "  - " << gerbong.getNamaSarana() << " (" << gerbong.getKodeSarana() << ")" << endl;
-        }
-        cout << "Stasiun Asal: " << stasiunAsal.getNamaStasiun() << " (" << stasiunAsal.getKodeStasiun() << ")" << endl;
-        cout << "Stasiun Tujuan: " << stasiunTujuan.getNamaStasiun() << " (" << stasiunTujuan.getKodeStasiun() << ")" << endl;
 
+        // Check if daftarLokomotif is empty
+        if (daftarLokomotif.empty()) {
+            cout << "  - Tidak ada lokomotif terpasang." << endl;
+        }
+        else
+        {
+            // Print daftarLokomotif
+            for (const auto& lokomotif : daftarLokomotif) {
+                cout << "  - " << lokomotif.getNamaSarana() << " (" << lokomotif.getKodeSarana() << ")" << endl;
+            }
+        }
+
+        // Check if daftarGerbong is empty
+        if (daftarGerbong.empty()) {
+            cout << "Daftar Gerbong: Tidak ada gerbong terpasang." << endl;
+        }
+        else
+        {
+            // Print daftarGerbong
+            cout << "Daftar Gerbong:" << endl;
+            for (const auto& gerbong : daftarGerbong) {
+                cout << "  - " << gerbong.getNamaSarana() << " (" << gerbong.getKodeSarana() << ")" << endl;
+            }
+        }
+
+        // Check if stasiunAsal or stasiunTujuan is not set
+        if (stasiunAsal.getKodeStasiun() == "" || stasiunTujuan.getKodeStasiun() == "") {
+            cout << "Stasiun Asal atau Stasiun Tujuan belum ditetapkan." << endl;
+            return;
+        }
+        else
+        {
+            cout << "Stasiun Asal: " << stasiunAsal.getNamaStasiun() << " (" << stasiunAsal.getKodeStasiun() << ")" << endl;
+            cout << "Stasiun Tujuan: " << stasiunTujuan.getNamaStasiun() << " (" << stasiunTujuan.getKodeStasiun() << ")" << endl;
+        }
     }
 
     // Getter and Setter for kodeKeretaApi

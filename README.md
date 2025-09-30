@@ -69,10 +69,10 @@ Saya Dzaka Musyaffa Hidayat dengan NIM 2404913 mengerjakan Tugas Praktikum 3 dal
 ## Dokumentasi
 
 **1. C++**  
-<img width="1092" height="697" alt="ss1" src="https://github.com/user-attachments/assets/166bf8dd-5931-453d-81fa-565bd3a96ed6" />  <img width="463" height="608" alt="ss2" src="https://github.com/user-attachments/assets/589bfb63-8f75-4378-ae37-549e4891fa24" />
+<img width="1092" height="697" alt="ss1" src="https://github.com/user-attachments/assets/342fb8b2-71ea-4c54-9344-75b0423936fc" />  
+<img width="442" height="603" alt="ss2" src="https://github.com/user-attachments/assets/344a846d-58fc-4b43-97eb-25ae4f1f4073" />  
+<img width="435" height="247" alt="ss3" src="https://github.com/user-attachments/assets/29b76cd5-75c3-422c-a925-4e1da2cb668d" />  
 
-<img width="442" height="603" alt="ss2" src="https://github.com/user-attachments/assets/1bd0c4c3-f0fb-44c6-8426-d377b1fae1d3" />  
-<img width="435" height="247" alt="ss3" src="https://github.com/user-attachments/assets/8d0ac02c-0c83-48ba-8463-a1001b27da9a" />  
 
 **2. Python**  
 <img width="677" height="607" alt="py1" src="https://github.com/user-attachments/assets/a5c9b5be-51ba-438c-9b7c-046a7452773d" />  
@@ -80,5 +80,5 @@ Saya Dzaka Musyaffa Hidayat dengan NIM 2404913 mengerjakan Tugas Praktikum 3 dal
 
 **3. Java**  
 <img width="676" height="610" alt="ss1" src="https://github.com/user-attachments/assets/dd04b5c8-21c0-4ccf-962e-bb732ec7181d" />  
-<img width="463" height="608" alt="ss2" src="https://github.com/user-attachments/assets/e9d0c3f0-5eaa-4987-a2e8-bed8cb411a87" />
+<img width="463" height="608" alt="ss2" src="https://github.com/user-attachments/assets/e9d0c3f0-5eaa-4987-a2e8-bed8cb411a87" />  
 

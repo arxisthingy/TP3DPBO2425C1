@@ -84,11 +84,12 @@ int main()
     GerbongBarang GD01104("GD 0 11 04", "Gerbong Datar", 15000, "Bogie Barber S-2", trainmarkC, 57000, "Petikemas");
     GD01104.printInfo();
 
-    // Check and print Stasiun
-    checkStasiun(daftarStasiun); // Should indicate the list is empty
-
+    
     // Stasiun
     vector<Stasiun> daftarStasiun;
+    
+    // Check and print Stasiun
+    checkStasiun(daftarStasiun); // Should indicate the list is empty
     Stasiun BL("BL", "Blitar", "Kelas Besar Tipe A");
     Stasiun PSE("PSE", "Pasar Senen", "Kelas Besar Tipe A");
     daftarStasiun.push_back(BL);

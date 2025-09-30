@@ -23,43 +23,47 @@ Saya Dzaka Musyaffa Hidayat dengan NIM 2404913 mengerjakan Tugas Praktikum 3 dal
 
 ## Atribut dan Methods Class
 
-### SaranaKereta 
+### 1. SaranaKereta 
 **Atribut:** `kodeSarana`, `namaSarana`, `beratSarana`, dan `tipeBogie`  
 **Methods:** Getter & Setter  
 
-### Mesin 
+### 2. Mesin 
 
 **Atribut:** `namaMesin`, `dayaMesin`, dan `silinder`
 **Methods:** Getter & Setter 
 
-### Trainmark
+### 3. Trainmark
 
 **Atribut:** `kodeTrainmark` dan `kecepatanMaks`
 **Methods:** Getter & Setter 
 
-### Lokomotif 
+### 4. Lokomotif 
 (Inheritance dari **SaranaKereta**)  
 **Atribut:** `jenisMesin` (objek class **Mesin**), `konfigurasiGandar`, dan `jenisMotorTraksi`  
 **Methods:** Getter & Setter dan `printInfo()` (untuk menampilkan informasi dari Lokomotif)   
 
-### Gerbong
+### 5. Gerbong
 (Interitance dari **SaranaKereta**)  
 **Atribut:** `trainmark` (objek class **Trainmark**)  
 **Methods:** Getter & Setter  
 
-### GerbongPenumpang
+### 6. GerbongPenumpang
 (Interitance dari **Gerbong**)  
 **Atribut:** `kapasitasPenumpang` dan `kelasLayanan`  
 **Methods:** Getter & Setter dan `printInfo()` (untuk menampilkan informasi dari GerbongPenumpang) 
 
-### GerbongBarang
+### 7. GerbongBarang
 (Interitance dari **Gerbong**)  
 **Atribut:** `kapasitasAngkut` dan `tipeKargo`  
 **Methods:** Getter & Setter dan `printInfo()` (untuk menampilkan informasi dari GerbongBarang) 
 
-### Kereta Api
+### 8. Kereta Api
 **Atribut:** `kodeKeretaApi`, `namaKeretaApi`, `Lokomotif` (objek class **Lokomotif**), `Gerbong` (objek class **Gerbong**), `stasiunAwal` (objek class **Stasiun**), dan `stasiunAkhir` (objek class **Stasiun**)  
 **Methods:** Getter & Setter,`addLokomotif()`, `addGerbong()`, `addStasiunAwal()`, `addStasiunAkhir()`, dan `printInfo()` (untuk menampilkan informasi dari KeretaApi)
+
+### 9. Stasiun
+**Atribut:** `kodeStasiun`, `namaStasiun`, `tipeStasiun`
+**Methods:** Getter & Setter dan `printInfo()` (untuk menampilkan informasi dari **Stasiun**) 
 
 ## Alur Program  
 - Program dimulai dan ditampilkan data awal (hardcode)
